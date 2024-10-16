@@ -132,3 +132,13 @@ Data can be anything.
 This is better than the typeof keyword because it doesn't classify arrays as objects.
 */
 ```
+
+Update 1.1: You can now easily get document elements through `$()` and `$$()`, similar to JQuery:
+```
+Log($("body")) // Logs the body element
+Log($$(".red")) // Logs all elements with style class "red"
+/*
+$() Format: $(selector)
+$$() Format: $$(selector)
+*/
+```
