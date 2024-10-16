@@ -15,9 +15,7 @@ function Iter(action, object) {
     }
 }
 function While(action, statement) {
-    while (statement) {
-        action();
-    }
+    do {action();} while (statement);
 }
 function If(statement, action) {
     if (statement) {
