@@ -48,3 +48,17 @@ const TYPE = a => a.push ? "array" : typeof a;
 Iter(i => {globalThis[i] = Math[i]}, Math)
 const $ = a => document.querySelector(a);
 const $$ = a => document.querySelectorAll(a);
+function objectsAreEqual(a, b) {
+    let ds = 0;
+    for (let i of Object.getOwnPropertyNames(a)) {
+        if (a[i] != b[i]) {
+            ds++;
+        }
+    }
+    for (let i of Object.getOwnPropertyNames(b)) {
+        if (a[i] != b[i]) {
+            ds++;
+        }
+    }
+    return NOT(ds > 0);
+}
