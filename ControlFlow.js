@@ -49,3 +49,4 @@ const NOR = (a, b)  => !OR(a, b);
 const TYPE = a => a.push ? "array" : typeof a;
 Iter(i => {globalThis[i] = Math[i]}, Math)
 const $ = a => document.querySelector(a);
+const $$ = a => document.querySelectorAll(a);
