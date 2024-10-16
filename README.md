@@ -141,3 +141,12 @@ $() Format: $(selector)
 $$() Format: $$(selector)
 */
 ```
+
+Update 1.2: Since directly using `==` between two identical objects/arrays returns false even if they're the same, there is no built-in way to tell if two data pieces are equal. Until we added the `isEqual()` function:
+```
+Log(isEqual({a: 2, b: 3}, {b: 3, a: 2}) // logs true
+/*
+Format: isEqual(data1, data2)
+Data parameters can be anything.
+*/
+```
