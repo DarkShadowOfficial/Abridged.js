@@ -40,7 +40,6 @@ function IfChain(statements, actions, alt_action) {
     }
     alt_action();
 }
-Iter(i => {globalThis[i] = Math[i]}, Math)
 const Log = console.log;
 const XOR = (a, b) => (a || b) && !(a && b);
 const OR = (a, b) => a || b;
@@ -48,3 +47,5 @@ const AND = (a, b) => a && b;
 const NOT = a => !a;
 const NOR = (a, b)  => !OR(a, b);
 const TYPE = a => a.push ? "array" : typeof a;
+Iter(i => {globalThis[i] = Math[i]}, Math)
+const $ = a => document.querySelector(a);
