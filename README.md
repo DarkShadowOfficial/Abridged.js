@@ -1,6 +1,5 @@
-# ControlFlow.js
-ControlFlow.js is a concise JavaScript library designed to reduce the amount of effort one puts into writing their control flow code.
-Control Flow is simply the conditional and iterational aspect of programming, including if-then statements, else statements, loops, and conditionals. This library shortens the amount of code one has to write for this.
+# Abridged.js
+Abridged.js is a concise JavaScript library designed to reduce the amount of effort one puts into writing code for almost any program.
 ## Documentation
 
 To write a for loop, simply use the `For()` function:
