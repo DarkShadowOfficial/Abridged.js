@@ -95,4 +95,4 @@ const float = a => {
 }
 const rand = (min, max) => random() * (max - min) + min;
 const roundTo = (x, nearest) => round(x/nearest)*nearest;
-const convertBase = (x, base, toBase) => parseInt(x, base).toString(toBase);
+const convertBase = (x, base, toBase) => int(parseInt(x, base).toString(toBase));
