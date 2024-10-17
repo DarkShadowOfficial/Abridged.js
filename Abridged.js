@@ -9,9 +9,7 @@ function Iter(action, object) {
             action(i);
         }
     } else if (TYPE(object) == "array") {
-        object.forEach(x => {
-            action(x);
-        })
+        object.forEach(x => action(x))
     }
 }
 function While(action, statement) {
@@ -74,3 +72,25 @@ function isEqual(a, b) {
         return false;
     }
 }
+const str = a => JSON.stringify(a);
+const int = a => {
+    switch (TYPE(a)) {
+        case "number":
+            return floor(a);
+        case "string":
+            return parseInt(a);
+        default:
+            throw new TypeError("Cannot parse as int.");
+    }
+}
+const float = a => {
+    switch (TYPE(a)) {
+        case "number":
+            return a;
+        case "string":
+            return parseFloat(a);
+        default:
+            throw new TypeError("Cannot parse as float.");
+    }
+}
+const rand = (min, max) => random() * (max - min) + min;
