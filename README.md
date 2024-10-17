@@ -132,7 +132,7 @@ This is better than the typeof keyword because it doesn't classify arrays as obj
 */
 ```
 
-Update 1.1: You can now easily get document elements through `$()` and `$$()`, similar to JQuery:
+###### Update 1.1: You can now easily get document elements through `$()` and `$$()`, similar to JQuery:
 ```
 Log($("body")) // Logs the body element
 Log($$(".red")) // Logs all elements with style class "red"
@@ -142,7 +142,22 @@ $$() Format: $$(selector)
 */
 ```
 
-Update 1.2: Since directly using `==` between two identical objects/arrays returns false even if they're the same, there is no built-in way to tell if two data pieces are equal. Until we added the `isEqual()` function:
+###### Update 1.2: Since directly using `==` between two identical objects/arrays returns false even if they're the same, there is no built-in way to tell if two data pieces are equal. Until we added the `isEqual()` function:
+
+###### Update 1.3: Three new math functions have been added - `rand()`, `roundTo()`, and `convertBase()`:
+```
+rand(0, 5) // returns a random number from 0 to 5. Note: You can make it in integer by putting it into round() or int()
+roundTo(1.3, 0.5) // returns 1.5, since we are rounding 1.3 to the nearest 0.5
+convertBase(432, 5, 2) // returns 1110101, since we are converting 432b5 to b2
+/*
+rand() Format: rand(min, max)
+--> min and max are numbers
+roundTo() Format: roundTo(x, nearest)
+--> x is a number, nearest is also a number that you want to round to, such as nearest 10
+convertBase() Format: convertBase(x, base, toBase)
+--> x is a number, base is the base the number is currently in, toBase is the base you're converting to
+*/
+```
 ```
 Log(isEqual({a: 2, b: 3}, {b: 3, a: 2}) // logs true
 /*
