@@ -170,14 +170,17 @@ convertBase() Format: convertBase(x, base, toBase)
 ```
 let array = [1, 5, 2, 10, 8, 3]
 append(array, 6) // adds 6 to the end of array
-sort(array) // returns [1, 2, 3, 5, 6, 8, 10]
+array = sort(array) // returns [1, 2, 3, 5, 6, 8, 10]
 filter(array, x => OR(x > 5, x < 3)) // returns [1, 2, 6, 8, 10]
+search(array, 5) // returns 3
 /*
 append() Format: append(array, item)
 --> array is an array, item is the item to add
 sort() Format: sort(array)
---> array is an array of numbers
+--> array is an array of numbers. NOTE: sort() does not change the array, it simply returns a new sorted version of the array
 filter() Format: filter(array, f)
 --> array is an array, f is a function that returns a boolean
+search() Format: search(array, target)
+--> array is an array, target is an item to be searched for
 */
 ```
