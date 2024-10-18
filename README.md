@@ -165,3 +165,19 @@ convertBase() Format: convertBase(x, base, toBase)
 --> x is a number, base is the base the number is currently in, toBase is the base you're converting to
 */
 ```
+
+###### Update 1.4: Array functions have been added - `append()`, `sort()`, `filter()`:
+```
+let array = [1, 5, 2, 10, 8, 3]
+append(array, 6) // adds 6 to the end of array
+sort(array) // returns [1, 2, 3, 5, 6, 8, 10]
+filter(array, x => OR(x > 5, x < 3)) // returns [1, 2, 6, 8, 10]
+/*
+append() Format: append(array, item)
+--> array is an array, item is the item to add
+sort() Format: sort(array)
+--> array is an array of numbers
+filter() Format: filter(array, f)
+--> array is an array, f is a function that returns a boolean
+*/
+```
